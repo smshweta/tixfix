@@ -17,7 +17,7 @@ I have created this application as a part of assignment for one of the company. 
 
 * User Friendliness
 * Data Consistency
-* Security
+* Basic Security
 
 ## If this was a production application 🤔
 
@@ -28,6 +28,10 @@ I have created this application as a part of assignment for one of the company. 
 4. As of now I haven't given much thought to user scalability. More than `100` users might require more considerations at the API and DB design level, especially, get all APIs and database indexes.
 5. Configured a more strict type-checking, and not using unknown datatype, which could be a cause of bigger problems.
 6. Wrote unit and end-to-end tests.
+7. Provide a more secure way to login. Currently, exposes password in login API paylaod.
+8. Error handling could be done better. Currently, in a short time, focused on covering happy cases, but did miss some edge cases.
+9. Better UI Design.
+
 
 ## Thank You! 🙂
 
