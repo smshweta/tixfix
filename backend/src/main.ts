@@ -1,5 +1,6 @@
 // import needed libraries
 import express from 'express';
+import cors from 'cors';
 import * as bodyParser from 'body-parser';
 import routes from './routes';
 
@@ -8,6 +9,7 @@ const app = express();
 // body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cors());
 // applying the routes to the basepath '/api'
 app.use('/api', routes);
 // define app port

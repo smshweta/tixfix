@@ -1,13 +1,28 @@
 {
-    "version": "0.1.0",
-    "configurations": [
-      {
-        "name": "Debug main.ts",
-        "type": "node",
-        "request": "launch",
-        "cwd": "${workspaceRoot}/backend",
-        "runtimeArgs": ["-r", "ts-node/register"],
-        "args": ["${workspaceRoot}/backend/src/main.ts"]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}/backend",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceRoot}/backend/src/main.ts"
+      ]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Frontend",
+      "url": "http://localhost:3002",
+      "webRoot": "${workspaceFolder}/frontend/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
       }
-    ]
+    }
+  ]
 }

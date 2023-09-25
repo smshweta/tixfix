@@ -25,6 +25,9 @@ const selectUserByUsername = (username: string): Promise<User> => {
                 if (err) {
                     return reject(err);
                 }
+                if (resultSet.length === 0) {
+                  return reject('User not found');
+                }
                 return resolve(resultSet[0]);
             });
         });

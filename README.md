@@ -1,6 +1,6 @@
 # Tixfix 👩‍🔧
 
-Support ticket management system developed using React and NodeJs.
+Support ticket management system developed using React NodeJS and MySQL.
 
 ## Tech Stack 💻
 
