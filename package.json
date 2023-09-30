@@ -1,0 +1,11 @@
+{
+  "name": "tixfix",
+  "version": "1.0.0",
+  "description": "Support ticket management system developed using React NodeJS and MySQL.",
+  "main": "backend/src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

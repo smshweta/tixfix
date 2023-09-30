@@ -2,7 +2,13 @@
   "scripts": {
     "lint": "eslint . --fix"
   },
-  "devDependencies": {
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.1",
     "@tsconfig/node-lts": "^18.12.5",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.14",
@@ -15,13 +21,5 @@
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.6.1"
   }
 }
