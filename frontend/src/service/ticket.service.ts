@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from 'axios'
 import { type Ticket } from '../models/ticket'
 
-const baseUrl: string = 'http://localhost:3000/api'
+const baseUrl: string = process.env.BACKEND_URL ?? ''
 const config: {
   headers: { 'x-access-token': string | null }
 } = {

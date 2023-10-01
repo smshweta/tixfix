@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from 'axios'
 import { type Auth, type User } from '../models/user'
 
-const baseUrl: string = 'http://localhost:3000/api'
+const baseUrl: string = process.env.BACKEND_URL ?? ''
 const config: {
   headers: { 'x-access-token': string | null }
 } = {
