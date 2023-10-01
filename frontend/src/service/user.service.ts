@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from 'axios'
 import { type Auth, type User } from '../models/user'
 
-const baseUrl: string = process.env.BACKEND_URL ?? ''
+const baseUrl: string = 'https://tixfix-app-87fae3062cce.herokuapp.com/api' ?? ''
 const config: {
   headers: { 'x-access-token': string | null }
 } = {
