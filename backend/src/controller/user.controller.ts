@@ -78,26 +78,10 @@ const logout = (req: Request, res: Response) => {
 }
 
 const getAllEmployees = (req: Request, res: Response) => {
-  const { id } = req.body;
-  user.selectUserById(id).then((user) => {
-    if (user.role !== Role.ADMIN) {
-      return res.status(400).send({
-        message: 'Only admin can get all employees'
-      })
-    }
-  }).catch((err: { code: unknown; }) => {
-    res.status(500).send({
-      message: 'Error while getting employees',
-      error: err.code
-    })
-  });
   user.selectAllEmployees().then((result: User[]) => {
-    res.status(200).send({
-      message: 'OK',
-      result: result
-    })
+    res.status(200).send(result)
   }).catch((err: { code: unknown; }) => {
-    console.log(err);
+    console.error(err);
     res.status(500).send({
       message: 'Error while getting employees',
       error: err.code

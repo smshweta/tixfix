@@ -76,7 +76,19 @@ const Dashboard = (): JSX.Element => {
   const fields: ColDef[] = [
     { field: 'name', sortable: true, resizable: true, filter: true },
     { field: 'description', sortable: true, resizable: true },
-    { field: 'status', sortable: true, resizable: true, filter: true, editable: isEmployee, headerName: statusHeaderName, onCellValueChanged: updateRowDataStatus },
+    {
+      field: 'status',
+      sortable: true,
+      resizable: true,
+      filter: true,
+      editable: isEmployee,
+      headerName: statusHeaderName,
+      cellEditor: 'agSelectCellEditor',
+      cellEditorParams: {
+        values: ['Open', 'In progress', 'Closed']
+      },
+      onCellValueChanged: updateRowDataStatus
+    },
     { field: 'assigned_uname', sortable: true, resizable: true, headerName: assignedUsernameHeader, filter: true, editable: isAdmin, onCellValueChanged: updateRowDataAssignedto },
     { field: 'created', sortable: true, resizable: true },
     { field: 'modified', sortable: true, resizable: true },
