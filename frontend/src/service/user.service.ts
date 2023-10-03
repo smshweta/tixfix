@@ -58,6 +58,7 @@ export const logout = async (): Promise<AxiosResponse<User>> => {
 }
 
 export const getAllEmployees = async (): Promise<AxiosResponse<User[]>> => {
+  config.headers['x-access-token'] = localStorage.getItem('token')
   const employees: AxiosResponse<User[]> = await axios.get(
     baseUrl + '/users/employees', config
   )
